@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERP - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <script>
+    window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        // axisX: {
+        //   valueFormatString: "DD MMM,YY",
+        // },
+        // axisY: {
+        //   title: "Temperature (in °C)",
+        //   suffix: " °C",
+        // },
+        legend: {
+          cursor: "pointer",
+          fontSize: 16,
+          itemclick: toggleDataSeries,
+        },
+        toolTip: {
+          shared: true,
+        },
+        data: [
+          {
+            // name: "Myrtle Beach",
+            type: "spline",
+            // yValueFormatString: "#0.## °C",
+            showInLegend: false,
+            dataPoints: [
+              { x: new Date(2017, 6, 24), y: 31 },
+              { x: new Date(2017, 6, 25), y: 31 },
+              { x: new Date(2017, 6, 26), y: 29 },
+              { x: new Date(2017, 6, 27), y: 29 },
+              { x: new Date(2017, 6, 28), y: 31 },
+              { x: new Date(2017, 6, 29), y: 30 },
+              { x: new Date(2017, 6, 30), y: 29 },
+            ],
+          },
+        ],
+      });
+      chart.render();
+
+      function toggleDataSeries(e) {
+        if (
+          typeof e.dataSeries.visible === "undefined" ||
+          e.dataSeries.visible
+        ) {
+          e.dataSeries.visible = false;
+        } else {
+          e.dataSeries.visible = true;
+        }
+        chart.render();
+      }
+    };
+  </script>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <a href="index.html" class="sidebar__entry active">
+          <div class="sidebar__entry__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.567 20.567"
+              fill="currentColor"
+            >
+              <path
+                id="Icon_awesome-user-alt"
+                data-name="Icon awesome-user-alt"
+                d="M10.283,11.569A5.784,5.784,0,1,0,4.5,5.784,5.786,5.786,0,0,0,10.283,11.569Zm5.142,1.285H13.212a6.993,6.993,0,0,1-5.857,0H5.142A5.141,5.141,0,0,0,0,18v.643a1.929,1.929,0,0,0,1.928,1.928H18.639a1.929,1.929,0,0,0,1.928-1.928V18A5.141,5.141,0,0,0,15.425,12.854Z"
+              />
+            </svg>
+          </div>
+          <div class="sidebar__entry__label">Dashboard</div>
+        </a>
+        <a href="human_resources.html" class="sidebar__entry">
+          <div class="sidebar__entry__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.567 20.567"
+              fill="currentColor"
+            >
+              <path
+                id="Icon_awesome-user-alt"
+                data-name="Icon awesome-user-alt"
+                d="M10.283,11.569A5.784,5.784,0,1,0,4.5,5.784,5.786,5.786,0,0,0,10.283,11.569Zm5.142,1.285H13.212a6.993,6.993,0,0,1-5.857,0H5.142A5.141,5.141,0,0,0,0,18v.643a1.929,1.929,0,0,0,1.928,1.928H18.639a1.929,1.929,0,0,0,1.928-1.928V18A5.141,5.141,0,0,0,15.425,12.854Z"
+              />
+            </svg>
+          </div>
+          <div class="sidebar__entry__label">Human Resource</div>
+        </a>
+        <a href="#" class="sidebar__entry active">
+          <div class="sidebar__entry__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.567 20.567"
+              fill="currentColor"
+            >
+              <path
+                id="Icon_awesome-user-alt"
+                data-name="Icon awesome-user-alt"
+                d="M10.283,11.569A5.784,5.784,0,1,0,4.5,5.784,5.786,5.786,0,0,0,10.283,11.569Zm5.142,1.285H13.212a6.993,6.993,0,0,1-5.857,0H5.142A5.141,5.141,0,0,0,0,18v.643a1.929,1.929,0,0,0,1.928,1.928H18.639a1.929,1.929,0,0,0,1.928-1.928V18A5.141,5.141,0,0,0,15.425,12.854Z"
+              />
+            </svg>
+          </div>
+          <div class="sidebar__entry__label">Dashboard</div>
+        </a>
+        <a href="#" class="sidebar__entry">
+          <div class="sidebar__entry__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.567 20.567"
+              fill="currentColor"
+            >
+              <path
+                id="Icon_awesome-user-alt"
+                data-name="Icon awesome-user-alt"
+                d="M10.283,11.569A5.784,5.784,0,1,0,4.5,5.784,5.786,5.786,0,0,0,10.283,11.569Zm5.142,1.285H13.212a6.993,6.993,0,0,1-5.857,0H5.142A5.141,5.141,0,0,0,0,18v.643a1.929,1.929,0,0,0,1.928,1.928H18.639a1.929,1.929,0,0,0,1.928-1.928V18A5.141,5.141,0,0,0,15.425,12.854Z"
+              />
+            </svg>
+          </div>
+          <div class="sidebar__entry__label">Settings</div>
+        </a>
+        <a href="#" class="sidebar__entry active">
+          <div class="sidebar__entry__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.567 20.567"
+              fill="currentColor"
+            >
+              <path
+                id="Icon_awesome-user-alt"
+                data-name="Icon awesome-user-alt"
+                d="M10.283,11.569A5.784,5.784,0,1,0,4.5,5.784,5.786,5.786,0,0,0,10.283,11.569Zm5.142,1.285H13.212a6.993,6.993,0,0,1-5.857,0H5.142A5.141,5.141,0,0,0,0,18v.643a1.929,1.929,0,0,0,1.928,1.928H18.639a1.929,1.929,0,0,0,1.928-1.928V18A5.141,5.141,0,0,0,15.425,12.854Z"
+              />
+            </svg>
+          </div>
+          <div class="sidebar__entry__label">Dashboard</div>
+        </a>
+        <a href="#" class="sidebar__entry">
+          <div class="sidebar__entry__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.567 20.567"
+              fill="currentColor"
+            >
+              <path
+                id="Icon_awesome-user-alt"
+                data-name="Icon awesome-user-alt"
+                d="M10.283,11.569A5.784,5.784,0,1,0,4.5,5.784,5.786,5.786,0,0,0,10.283,11.569Zm5.142,1.285H13.212a6.993,6.993,0,0,1-5.857,0H5.142A5.141,5.141,0,0,0,0,18v.643a1.929,1.929,0,0,0,1.928,1.928H18.639a1.929,1.929,0,0,0,1.928-1.928V18A5.141,5.141,0,0,0,15.425,12.854Z"
+              />
+            </svg>
+          </div>
+          <div class="sidebar__entry__label">Settings</div>
+        </a>
+        <a href="#" class="sidebar__entry active">
+          <div class="sidebar__entry__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.567 20.567"
+              fill="currentColor"
+            >
+              <path
+                id="Icon_awesome-user-alt"
+                data-name="Icon awesome-user-alt"
+                d="M10.283,11.569A5.784,5.784,0,1,0,4.5,5.784,5.786,5.786,0,0,0,10.283,11.569Zm5.142,1.285H13.212a6.993,6.993,0,0,1-5.857,0H5.142A5.141,5.141,0,0,0,0,18v.643a1.929,1.929,0,0,0,1.928,1.928H18.639a1.929,1.929,0,0,0,1.928-1.928V18A5.141,5.141,0,0,0,15.425,12.854Z"
+              />
+            </svg>
+          </div>
+          <div class="sidebar__entry__label">Dashboard</div>
+        </a>
+        <a href="#" class="sidebar__entry">
+          <div class="sidebar__entry__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.567 20.567"
+              fill="currentColor"
+            >
+              <path
+                id="Icon_awesome-user-alt"
+                data-name="Icon awesome-user-alt"
+                d="M10.283,11.569A5.784,5.784,0,1,0,4.5,5.784,5.786,5.786,0,0,0,10.283,11.569Zm5.142,1.285H13.212a6.993,6.993,0,0,1-5.857,0H5.142A5.141,5.141,0,0,0,0,18v.643a1.929,1.929,0,0,0,1.928,1.928H18.639a1.929,1.929,0,0,0,1.928-1.928V18A5.141,5.141,0,0,0,15.425,12.854Z"
+              />
+            </svg>
+          </div>
+          <div class="sidebar__entry__label">Settings</div>
+        </a>
+      </div>
+      <div class="main">
+        <div class="topbar">
+          <div class="topbar__left">
+            <div class="topbar__subheading">Welcome!</div>
+            <div class="topbar__heading">Dashboard</div>
+          </div>
+        </div>
+        <div class="main__content">
+          <div class="main__content__row">
+            <div class="main__content__col">
+              <div class="main__content__row">
+                <div class="graph__card">
+                  <div class="graph__card__left">STATISTICS</div>
+                  <div class="graph__card__middle">
+                    <div class="graph__card__middle__content">
+                      <div class="graph__card__middle__subheading">
+                        Total Sales
+                      </div>
+                      <div class="graph__card__middle__heading">72.593</div>
+                    </div>
+                    <div class="graph__card__middle__content">
+                      <div class="graph__card__middle__subheading">
+                        This week
+                      </div>
+                      <div class="graph__card__middle__heading">9.307</div>
+                    </div>
+                    <div class="graph__card__middle__content">
+                      <div class="graph__card__middle__subheading">Today</div>
+                      <div class="graph__card__middle__heading">1.328</div>
+                    </div>
+                  </div>
+                  <div class="graph__card__right">
+                    <div
+                      id="chartContainer"
+                      style="height: 300px; width: 100%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="main__content__row">
+                <div class="main__content__col">
+                  <a class="feature__card">
+                    <div class="feature__card__badge">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 37.461 45.187"
+                        fill="currentColor"
+                      >
+                        <g id="hammer" transform="translate(-43.769)">
+                          <g
+                            id="Group_2964"
+                            data-name="Group 2964"
+                            transform="translate(57.771 13.262)"
+                          >
+                            <g id="Group_2963" data-name="Group 2963">
+                              <rect
+                                id="Rectangle_618"
+                                data-name="Rectangle 618"
+                                width="10.612"
+                                height="4.646"
+                              />
+                            </g>
+                          </g>
+                          <g
+                            id="Group_2966"
+                            data-name="Group 2966"
+                            transform="translate(57.771 20.56)"
+                          >
+                            <g
+                              id="Group_2965"
+                              data-name="Group 2965"
+                              transform="translate(0)"
+                            >
+                              <path
+                                id="Path_9213"
+                                data-name="Path 9213"
+                                d="M202.425,232.959v19.32a5.306,5.306,0,1,0,10.613,0v-19.32Z"
+                                transform="translate(-202.425 -232.959)"
+                              />
+                            </g>
+                          </g>
+                          <g
+                            id="Group_2968"
+                            data-name="Group 2968"
+                            transform="translate(43.769)"
+                          >
+                            <g
+                              id="Group_2967"
+                              data-name="Group 2967"
+                              transform="translate(0)"
+                            >
+                              <path
+                                id="Path_9214"
+                                data-name="Path 9214"
+                                d="M75.146,0l-.311.114L70.649,1.648l-.072-.036L67.383,0,59.1,0A14.938,14.938,0,0,0,44.4,12.216l-.633,3.426s3.988-3.612,4.842-4.149a11.458,11.458,0,0,1,9.16-.846l10.613-.031,2.264-1.647,4.487,1.647h6.1V0Z"
+                                transform="translate(-43.769)"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="feature__card__heading">
+                      <span>Tendering</span>
+                      <div class="feature__card__heading__border"></div>
+                    </div>
+                    <div class="feature__card__content">
+                      54 Tenders in Progress
+                    </div>
+                  </a>
+                </div>
+                <div class="space" style="width: 2em"></div>
+                <div class="main__content__col">
+                  <a class="feature__card__reverse">
+                    <div class="feature__card__badge__reverse">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 37.405 50"
+                        fill="currentColor"
+                      >
+                        <g id="engineering" transform="translate(-64.486)">
+                          <path
+                            id="Path_9211"
+                            data-name="Path 9211"
+                            d="M192.734,147.547V135.518a7.3,7.3,0,0,0-2.93-13v7.176h-2.93v-7.176a7.3,7.3,0,0,0-2.93,13v12.029a7.3,7.3,0,0,0,2.93,13.007v-7.176h2.93v7.176a7.3,7.3,0,0,0,2.93-13.007Z"
+                            transform="translate(-105.149 -110.553)"
+                          />
+                          <path
+                            id="Path_9212"
+                            data-name="Path 9212"
+                            d="M99.3,19.141a14.88,14.88,0,0,0-.542-3.908l3.13-1.788L97.5,5.8l-3.14,1.827a15.733,15.733,0,0,0-6.772-3.987V0H78.8V3.637A16.064,16.064,0,0,0,72,7.6L68.881,5.8l-4.395,7.649,3.108,1.761a15.47,15.47,0,0,0-.518,3.931,14.88,14.88,0,0,0,.542,3.908l-3.13,1.788,4.395,7.649,3.14-1.827a15.94,15.94,0,0,0,3.842,2.8V26.28a10.254,10.254,0,1,1,14.648,0v7.182a15.942,15.942,0,0,0,3.842-2.8l3.14,1.827,4.395-7.649-3.13-1.788a14.879,14.879,0,0,0,.542-3.908Z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="feature__card__heading__reverse">
+                      <span>Engineering</span>
+                      <div class="feature__card__heading__border"></div>
+                    </div>
+                    <div class="feature__card__content__reverse">
+                      54 Contractors
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="main__content__col">
+              <div class="main__content__row">
+                <div class="main__content__col main__content__col__marg">
+                  <a class="inventory__card">
+                    <div class="inventory__card__icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30.564"
+                        height="30.564"
+                        viewBox="0 0 40.564 40.564"
+                      >
+                        <g id="shipping" transform="translate(0 0)">
+                          <path
+                            id="Path_491"
+                            data-name="Path 491"
+                            d="M18.592,14.268A1.271,1.271,0,0,0,17.324,13H10.986v5.071a1.69,1.69,0,1,1-3.38,0V13H1.268A1.27,1.27,0,0,0,0,14.268V30.324a1.27,1.27,0,0,0,1.268,1.268H17.324a1.271,1.271,0,0,0,1.268-1.268Z"
+                            transform="translate(0 8.972)"
+                            fill="#fff"
+                          />
+                          <path
+                            id="Path_492"
+                            data-name="Path 492"
+                            d="M31.592,14.268A1.271,1.271,0,0,0,30.324,13H23.986v5.071a1.69,1.69,0,1,1-3.38,0V13H14.268A1.27,1.27,0,0,0,13,14.268V30.324a1.27,1.27,0,0,0,1.268,1.268H30.324a1.271,1.271,0,0,0,1.268-1.268Z"
+                            transform="translate(8.972 8.972)"
+                            fill="#fff"
+                          />
+                          <path
+                            id="Path_493"
+                            data-name="Path 493"
+                            d="M25.092,1.268A1.272,1.272,0,0,0,23.824,0H17.486V5.071a1.69,1.69,0,1,1-3.38,0V0H7.768A1.271,1.271,0,0,0,6.5,1.268V17.324a1.27,1.27,0,0,0,1.268,1.268H23.824a1.271,1.271,0,0,0,1.268-1.268Z"
+                            transform="translate(4.486 0)"
+                            fill="#fff"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="inventory__card__content">
+                      <div class="inventory__card__content__heading">
+                        <span>Inventory</span>
+                        <div
+                          class="inventory__card__content__heading__border"
+                        ></div>
+                      </div>
+                      <div class="inventory__card__content__info">
+                        455 Products
+                      </div>
+                    </div>
+                  </a>
+                  <a class="perchase__card">
+                    <div
+                      class="inventory__card"
+                      style="background-color: #ff91b3 !important"
+                    >
+                      <div
+                        class="inventory__card__icon"
+                        style="background-color: #feacc6 !important"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30.836"
+                          height="30.944"
+                          viewBox="0 0 43.836 42.944"
+                        >
+                          <g
+                            id="cart_1_"
+                            data-name="cart (1)"
+                            transform="translate(0 -4.428)"
+                          >
+                            <g
+                              id="Group_2962"
+                              data-name="Group 2962"
+                              transform="translate(0 4.428)"
+                            >
+                              <g id="Group_2961" data-name="Group 2961">
+                                <circle
+                                  id="Ellipse_1164"
+                                  data-name="Ellipse 1164"
+                                  cx="5.313"
+                                  cy="5.313"
+                                  r="5.313"
+                                  transform="translate(10.213 32.292)"
+                                  fill="#fff"
+                                />
+                                <path
+                                  id="Path_9208"
+                                  data-name="Path 9208"
+                                  d="M270.5,324.2h0a5.365,5.365,0,1,0,4.813,4.813A5.365,5.365,0,0,0,270.5,324.2Z"
+                                  transform="translate(-237.947 -291.962)"
+                                  fill="#fff"
+                                />
+                                <path
+                                  id="Path_9209"
+                                  data-name="Path 9209"
+                                  d="M43.484,16.448a1.393,1.393,0,0,0-1.186-.619h-5.88v-.1a11.3,11.3,0,1,0-22.593,0v.1H9.44L7.944,9.02a1.547,1.547,0,0,0-1.5-1.186H0v3.095H5.21l4.8,22.026a1.5,1.5,0,0,0,1.5,1.238H38.481a1.547,1.547,0,0,0,1.5-1.186l3.817-15.269A1.444,1.444,0,0,0,43.484,16.448Zm-18.364,7.48a8.2,8.2,0,1,1,8.2-8.2A8.2,8.2,0,0,1,25.121,23.927Z"
+                                  transform="translate(0 -4.428)"
+                                  fill="#fff"
+                                />
+                                <path
+                                  id="Path_9210"
+                                  data-name="Path 9210"
+                                  d="M191.935,72.519,189.1,69.63,186.88,71.8l3.92,3.972a1.548,1.548,0,0,0,1.083.464,1.444,1.444,0,0,0,1.083-.413l6.5-6.138-2.115-2.27Z"
+                                  transform="translate(-168.052 -61.066)"
+                                  fill="#fff"
+                                />
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="inventory__card__content">
+                        <div class="inventory__card__content__heading">
+                          <span>Puschase</span>
+                          <div
+                            class="inventory__card__content__heading__border"
+                            style="background-color: #ffffff !important"
+                          ></div>
+                        </div>
+                        <div
+                          class="inventory__card__content__info"
+                          style="color: #f95a8f !important"
+                        >
+                          455 Products
+                        </div>
+                      </div>
+                    </div>
+                    <div class="perchase__card__wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="100%"
+                        height="153.847"
+                        viewBox="0 0 379.049 193.847"
+                      >
+                        <defs>
+                          <linearGradient
+                            id="linear-gradient"
+                            x1="0.5"
+                            y1="0.22"
+                            x2="0.5"
+                            y2="0.78"
+                            gradientUnits="objectBoundingBox"
+                          >
+                            <stop
+                              offset="0"
+                              stop-color="#fff"
+                              stop-opacity="0.2"
+                            />
+                            <stop
+                              offset="1"
+                              stop-color="#fff"
+                              stop-opacity="0"
+                            />
+                          </linearGradient>
+                        </defs>
+                        <g
+                          id="Chart"
+                          transform="matrix(0.985, -0.174, 0.174, 0.985, -159.362, -842.803)"
+                          opacity="0.33"
+                        >
+                          <path
+                            id="Path_2"
+                            data-name="Path 2"
+                            d="M0,38.363A63.48,63.48,0,0,1,30.238,41.87c30.6,11.428,32.344-9.5,43.69-19.59,10.381-9.232,18.978-3.6,30.536,7.691,8.525,8.327,20.948,22.3,33.814,20.054,11.761-2.057,20.1-18.45,36.4-22.619,12.92-3.3,23.42,5.773,38.3,2.566C233.158,25.619,236.165,8.95,250.589,8.95c17.8,0,28.953,29.745,45.149,29.745,16.1,0,24.383-29.405,41.995-20.479C351.2,25.041,358.971,0,358.971,0"
+                            transform="translate(1.395 921.555)"
+                            fill="none"
+                            stroke="#fff"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="3"
+                          />
+                          <path
+                            id="Path_398"
+                            data-name="Path 398"
+                            d="M3143.545,1243.141s8.655-2.8,14.686,0a52.882,52.882,0,0,0,15.189,4.765c6.037,1.123,8.619,2.95,13.611,2.242s15.035-6.513,16.158-9.536,5.625-11.6,10.988-14.277,10.674-6.474,14.794-2.837,18.129,15.25,18.129,15.25,12.872,12.175,17.554,13.79,9.47,3.639,12.677,2.93,9.412-2.784,11.94-5.319,12.381-15.629,23.3-16.523a82.048,82.048,0,0,1,21.979,1.664s2.917-1.11,9.553,0,11.544,3.225,17.48-1.664,16.546-17.984,22.888-18.089,13.729.06,18.149,4.732,17.917,17.526,24.645,20.343,11.555,2.523,17.579-1.865,12.6-14.153,17.739-15.25,8.229-.944,11.622,0,6.271,2.476,10.709,0,13.807-18.611,13.807-18.611v132.192H3137.611v-93.938Z"
+                            transform="translate(-3137.611 -284.437)"
+                            fill="url(#linear-gradient)"
+                          />
+                        </g>
+                      </svg>
+                      <div class="perchase__card__content">
+                        <div class="perchase__card__content__amount">
+                          Rs 46,76,666
+                        </div>
+                        <div class="perchase__card__content__stats">
+                          <span>1.8%</span>
+                          <svg
+                            id="ic-arrow-narrow-up"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="15.1"
+                            height="15.1"
+                            viewBox="0 0 15.1 15.1"
+                          >
+                            <path
+                              id="Path_397"
+                              data-name="Path 397"
+                              d="M0,0H15.1V15.1H0Z"
+                              fill="none"
+                            />
+                            <line
+                              id="Line_23"
+                              data-name="Line 23"
+                              y2="9.556"
+                              transform="translate(7.61 2.712)"
+                              fill="none"
+                              stroke="#fff"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <line
+                              id="Line_24"
+                              data-name="Line 24"
+                              x1="2.831"
+                              y1="2.831"
+                              transform="translate(7.624 2.739)"
+                              fill="none"
+                              stroke="#fff"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <line
+                              id="Line_25"
+                              data-name="Line 25"
+                              y1="2.831"
+                              x2="2.831"
+                              transform="translate(4.765 2.739)"
+                              fill="none"
+                              stroke="#fff"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                          <span>than last month</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="adminstration__card">
+                    <div
+                      class="inventory__card__content__heading"
+                      style="width: fit-content"
+                    >
+                      <span>Administration</span>
+                      <div
+                        class="inventory__card__content__heading__border"
+                      ></div>
+                    </div>
+                    <div class="adminstration__card__row">
+                      <div class="inventory__card__icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30.836"
+                          height="30.944"
+                          viewBox="0 0 43.836 42.944"
+                        >
+                          <g
+                            id="cart_1_"
+                            data-name="cart (1)"
+                            transform="translate(0 -4.428)"
+                          >
+                            <g
+                              id="Group_2962"
+                              data-name="Group 2962"
+                              transform="translate(0 4.428)"
+                            >
+                              <g id="Group_2961" data-name="Group 2961">
+                                <circle
+                                  id="Ellipse_1164"
+                                  data-name="Ellipse 1164"
+                                  cx="5.313"
+                                  cy="5.313"
+                                  r="5.313"
+                                  transform="translate(10.213 32.292)"
+                                  fill="#fff"
+                                />
+                                <path
+                                  id="Path_9208"
+                                  data-name="Path 9208"
+                                  d="M270.5,324.2h0a5.365,5.365,0,1,0,4.813,4.813A5.365,5.365,0,0,0,270.5,324.2Z"
+                                  transform="translate(-237.947 -291.962)"
+                                  fill="#fff"
+                                />
+                                <path
+                                  id="Path_9209"
+                                  data-name="Path 9209"
+                                  d="M43.484,16.448a1.393,1.393,0,0,0-1.186-.619h-5.88v-.1a11.3,11.3,0,1,0-22.593,0v.1H9.44L7.944,9.02a1.547,1.547,0,0,0-1.5-1.186H0v3.095H5.21l4.8,22.026a1.5,1.5,0,0,0,1.5,1.238H38.481a1.547,1.547,0,0,0,1.5-1.186l3.817-15.269A1.444,1.444,0,0,0,43.484,16.448Zm-18.364,7.48a8.2,8.2,0,1,1,8.2-8.2A8.2,8.2,0,0,1,25.121,23.927Z"
+                                  transform="translate(0 -4.428)"
+                                  fill="#fff"
+                                />
+                                <path
+                                  id="Path_9210"
+                                  data-name="Path 9210"
+                                  d="M191.935,72.519,189.1,69.63,186.88,71.8l3.92,3.972a1.548,1.548,0,0,0,1.083.464,1.444,1.444,0,0,0,1.083-.413l6.5-6.138-2.115-2.27Z"
+                                  transform="translate(-168.052 -61.066)"
+                                  fill="#fff"
+                                />
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+
+                      <div class="adminstration__card__row__content">
+                        <div class="adminstration__card__row__content__heading">
+                          54
+                        </div>
+                        <div class="adminstration__card__row__content__email">
+                          Users
+                        </div>
+                      </div>
+                    </div>
+                    <div class="adminstration__card__row">
+                      <a
+                        href="#"
+                        class="adminstration__card__row__link"
+                        style="margin-right: 1em"
+                        >Company Details</a
+                      >
+                      <a href="#" class="adminstration__card__row__link"
+                        >Roles</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="main__content__col">
+                  <div class="main__content__row">
+                    <div class="attandance__card">
+                      <div class="attandance__card__topbar">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30.403"
+                          height="21.282"
+                          style="margin-right: 1em"
+                          viewBox="0 0 30.403 21.282"
+                        >
+                          <path
+                            id="Icon_awesome-user-friends"
+                            data-name="Icon awesome-user-friends"
+                            d="M9.121,12.891A5.321,5.321,0,1,0,3.8,7.571,5.318,5.318,0,0,0,9.121,12.891Zm3.648,1.52h-.394a7.346,7.346,0,0,1-6.508,0H5.473A5.474,5.474,0,0,0,0,19.884v1.368a2.281,2.281,0,0,0,2.28,2.28H15.962a2.281,2.281,0,0,0,2.28-2.28V19.884A5.474,5.474,0,0,0,12.769,14.411ZM22.8,12.891a4.56,4.56,0,1,0-4.56-4.56A4.562,4.562,0,0,0,22.8,12.891Zm2.28,1.52H24.9a5.991,5.991,0,0,1-4.2,0h-.181a5.276,5.276,0,0,0-2.646.732,6.952,6.952,0,0,1,1.886,4.741v1.824c0,.1-.024.2-.029.3h8.389a2.281,2.281,0,0,0,2.28-2.28,5.318,5.318,0,0,0-5.321-5.321Z"
+                            transform="translate(0 -2.25)"
+                            fill="#7163ba"
+                          />
+                        </svg>
+                        <div class="attandance__card__topbar__heading">
+                          Human Resource
+                        </div>
+                      </div>
+                      <div class="attandance__card__nav">
+                        <a
+                          href="#"
+                          class="attandance__card__nav__entry"
+                          aria-selected="true"
+                        >
+                          Present Today
+                        </a>
+                        <a href="#" class="attandance__card__nav__entry">
+                          Everyone
+                        </a>
+                      </div>
+                      <div class="attandance__card__user">
+                        <div class="attandance__card__user__entry">
+                          <img
+                            src="./assets/userPic.png"
+                            alt="userPic"
+                            class="attandance__card__user__entry__img"
+                          />
+                          <div class="attandance__card__user__entry__content">
+                            <div class="attandance__card__user__entry__name">
+                              Asim Rasheed
+                            </div>
+                            <div class="attandance__card__user__entry__email">
+                              asimrasheed12@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                        <div class="attandance__card__user__entry">
+                          <img
+                            src="./assets/userPic.png"
+                            alt="userPic"
+                            class="attandance__card__user__entry__img"
+                          />
+                          <div class="attandance__card__user__entry__content">
+                            <div class="attandance__card__user__entry__name">
+                              Asim Rasheed
+                            </div>
+                            <div class="attandance__card__user__entry__email">
+                              asimrasheed12@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                        <div class="attandance__card__user__entry">
+                          <img
+                            src="./assets/userPic.png"
+                            alt="userPic"
+                            class="attandance__card__user__entry__img"
+                          />
+                          <div class="attandance__card__user__entry__content">
+                            <div class="attandance__card__user__entry__name">
+                              Asim Rasheed
+                            </div>
+                            <div class="attandance__card__user__entry__email">
+                              asimrasheed12@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                        <div class="attandance__card__user__entry">
+                          <img
+                            src="./assets/userPic.png"
+                            alt="userPic"
+                            class="attandance__card__user__entry__img"
+                          />
+                          <div class="attandance__card__user__entry__content">
+                            <div class="attandance__card__user__entry__name">
+                              Asim Rasheed
+                            </div>
+                            <div class="attandance__card__user__entry__email">
+                              asimrasheed12@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                        <div class="attandance__card__user__entry">
+                          <img
+                            src="./assets/userPic.png"
+                            alt="userPic"
+                            class="attandance__card__user__entry__img"
+                          />
+                          <div class="attandance__card__user__entry__content">
+                            <div class="attandance__card__user__entry__name">
+                              Asim Rasheed
+                            </div>
+                            <div class="attandance__card__user__entry__email">
+                              asimrasheed12@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                        <div class="attandance__card__user__entry">
+                          <img
+                            src="./assets/userPic.png"
+                            alt="userPic"
+                            class="attandance__card__user__entry__img"
+                          />
+                          <div class="attandance__card__user__entry__content">
+                            <div class="attandance__card__user__entry__name">
+                              Asim Rasheed
+                            </div>
+                            <div class="attandance__card__user__entry__email">
+                              asimrasheed12@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                        <div class="attandance__card__user__entry">
+                          <img
+                            src="./assets/userPic.png"
+                            alt="userPic"
+                            class="attandance__card__user__entry__img"
+                          />
+                          <div class="attandance__card__user__entry__content">
+                            <div class="attandance__card__user__entry__name">
+                              Asim Rasheed
+                            </div>
+                            <div class="attandance__card__user__entry__email">
+                              asimrasheed12@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                        <div class="attandance__card__user__entry">
+                          <img
+                            src="./assets/userPic.png"
+                            alt="userPic"
+                            class="attandance__card__user__entry__img"
+                          />
+                          <div class="attandance__card__user__entry__content">
+                            <div class="attandance__card__user__entry__name">
+                              Asim Rasheed
+                            </div>
+                            <div class="attandance__card__user__entry__email">
+                              asimrasheed12@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                        <div class="attandance__card__user__entry">
+                          <img
+                            src="./assets/userPic.png"
+                            alt="userPic"
+                            class="attandance__card__user__entry__img"
+                          />
+                          <div class="attandance__card__user__entry__content">
+                            <div class="attandance__card__user__entry__name">
+                              Asim Rasheed
+                            </div>
+                            <div class="attandance__card__user__entry__email">
+                              asimrasheed12@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="#" class="attandance__card__link">View All</a>
+                    </div>
+                  </div>
+                  <div class="main__content__row">
+                    <div class="attandance__card" style="margin-top: 2em">
+                      <div class="attandance__card__topbar">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="46.703"
+                          height="31.445"
+                          viewBox="0 0 46.703 31.445"
+                          style="margin-right: 1em"
+                        >
+                          <g id="dollar" transform="translate(0 -75.473)">
+                            <g
+                              id="Group_2974"
+                              data-name="Group 2974"
+                              transform="translate(19.421 99.095)"
+                            >
+                              <g id="Group_2973" data-name="Group 2973">
+                                <path
+                                  id="Path_9226"
+                                  data-name="Path 9226"
+                                  d="M196.765,309.486V309.3c-.93-.01-1.819-.061-2.679-.131a12.205,12.205,0,0,1-1.941,3.325,31.577,31.577,0,0,0,4.68.414Z"
+                                  transform="translate(-192.146 -309.173)"
+                                  fill="#7565c3"
+                                />
+                              </g>
+                            </g>
+                            <g
+                              id="Group_2976"
+                              data-name="Group 2976"
+                              transform="translate(0 84.681)"
+                            >
+                              <g id="Group_2975" data-name="Group 2975">
+                                <path
+                                  id="Path_9227"
+                                  data-name="Path 9227"
+                                  d="M19.947,174.609a10.148,10.148,0,0,0-6.893-7.591,10.3,10.3,0,0,0-2.982-.445,10.071,10.071,0,1,0,6.782,17.517,10.015,10.015,0,0,0,3.3-7.449A10.571,10.571,0,0,0,19.947,174.609Zm-9.875.677a3.815,3.815,0,0,1,1.031,7.49v.889a1.011,1.011,0,0,1-2.022,0v-.879a3.84,3.84,0,0,1-2.83-3.689,1.011,1.011,0,0,1,2.022,0,1.794,1.794,0,1,0,1.789-1.8,3.813,3.813,0,0,1-.97-7.5v-.435a1.011,1.011,0,1,1,2.022,0v.455a3.821,3.821,0,0,1,2.78,3.679,1.011,1.011,0,0,1-2.022,0,1.8,1.8,0,1,0-1.8,1.789Z"
+                                  transform="translate(0 -166.573)"
+                                  fill="#7565c3"
+                                />
+                              </g>
+                            </g>
+                            <g
+                              id="Group_2978"
+                              data-name="Group 2978"
+                              transform="translate(21.938 93.546)"
+                            >
+                              <g id="Group_2977" data-name="Group 2977">
+                                <path
+                                  id="Path_9228"
+                                  data-name="Path 9228"
+                                  d="M219.118,257.922l-.061-3.578c-.627-.01-1.243-.03-1.83-.071.03.4.051.8.051,1.193a12.426,12.426,0,0,1-.232,2.365C217.713,257.892,218.411,257.922,219.118,257.922Z"
+                                  transform="translate(-217.046 -254.273)"
+                                  fill="#7565c3"
+                                />
+                              </g>
+                            </g>
+                            <g
+                              id="Group_2980"
+                              data-name="Group 2980"
+                              transform="translate(14.317 80.466)"
+                            >
+                              <g id="Group_2979" data-name="Group 2979">
+                                <path
+                                  id="Path_9229"
+                                  data-name="Path 9229"
+                                  d="M162.407,124.873a12.121,12.121,0,0,1-2.193.879,33.394,33.394,0,0,1-16.385.081,11.2,11.2,0,0,1-2.183-.839l.071,2.85a11.662,11.662,0,0,1,3.164,1.789c.03.01.051.01.081.02a28.919,28.919,0,0,0,6.883.758,28.61,28.61,0,0,0,7.783-.98c2.193-.667,2.679-1.365,2.679-1.5a.581.581,0,0,1,.1-.414Z"
+                                  transform="translate(-141.646 -124.873)"
+                                  fill="#7565c3"
+                                />
+                              </g>
+                            </g>
+                            <g
+                              id="Group_2982"
+                              data-name="Group 2982"
+                              transform="translate(14.216 75.473)"
+                            >
+                              <g id="Group_2981" data-name="Group 2981">
+                                <path
+                                  id="Path_9230"
+                                  data-name="Path 9230"
+                                  d="M158.719,76.453a28.22,28.22,0,0,0-7.783-.98,27.3,27.3,0,0,0-7.682.98c-2.133.647-2.6,1.284-2.608,1.486,0,0,.01,0,.01.02.051.222.657.91,2.83,1.536a27.752,27.752,0,0,0,7.449.91,28.561,28.561,0,0,0,7.773-.97c2.193-.657,2.689-1.354,2.689-1.5S160.912,77.121,158.719,76.453Z"
+                                  transform="translate(-140.646 -75.473)"
+                                  fill="#7565c3"
+                                />
+                              </g>
+                            </g>
+                            <g
+                              id="Group_2984"
+                              data-name="Group 2984"
+                              transform="translate(26.103 101.389)"
+                            >
+                              <g id="Group_2983" data-name="Group 2983">
+                                <path
+                                  id="Path_9231"
+                                  data-name="Path 9231"
+                                  d="M278.825,334.905v-3.032a12.955,12.955,0,0,1-2.123.859,29.888,29.888,0,0,1-8.349,1.061,31.107,31.107,0,0,1-7.591-.869,13.167,13.167,0,0,1-2.517-.92l.051,2.931v.02c0,.152.445.829,2.577,1.486a27.505,27.505,0,0,0,7.672.96,26.985,26.985,0,0,0,7.692-.991c2.133-.667,2.6-1.365,2.6-1.506Z"
+                                  transform="translate(-258.246 -331.873)"
+                                  fill="#7565c3"
+                                />
+                              </g>
+                            </g>
+                            <g
+                              id="Group_2986"
+                              data-name="Group 2986"
+                              transform="translate(19.917 86.106)"
+                            >
+                              <g id="Group_2985" data-name="Group 2985">
+                                <path
+                                  id="Path_9232"
+                                  data-name="Path 9232"
+                                  d="M212.187,180.673a12.766,12.766,0,0,1-2.183.869,30.169,30.169,0,0,1-8.379,1.061,36.4,36.4,0,0,1-4.579-.293,11.983,11.983,0,0,1,1.809,3.76c.869.061,1.809.1,2.78.1h.1c1.658-1.819,6.115-2.729,10.451-2.85v-2.648Z"
+                                  transform="translate(-197.046 -180.673)"
+                                  fill="#7565c3"
+                                />
+                              </g>
+                            </g>
+                            <g
+                              id="Group_2988"
+                              data-name="Group 2988"
+                              transform="translate(26.012 95.8)"
+                            >
+                              <g id="Group_2987" data-name="Group 2987">
+                                <path
+                                  id="Path_9233"
+                                  data-name="Path 9233"
+                                  d="M275.823,277.432a30.257,30.257,0,0,1-8.258,1.031,29.875,29.875,0,0,1-8.015-.98,12.4,12.4,0,0,1-2.2-.849l.04,2.325.01.849c.788.98,4.559,2.244,10.158,2.244a27.967,27.967,0,0,0,7.753-.97c2.183-.667,2.658-1.354,2.658-1.5,0-.111.061-.232.061-.334h.01v-2.679A11.544,11.544,0,0,1,275.823,277.432Z"
+                                  transform="translate(-257.346 -276.573)"
+                                  fill="#7565c3"
+                                />
+                              </g>
+                            </g>
+                            <g
+                              id="Group_2990"
+                              data-name="Group 2990"
+                              transform="translate(25.941 90.796)"
+                            >
+                              <g id="Group_2989" data-name="Group 2989">
+                                <path
+                                  id="Path_9234"
+                                  data-name="Path 9234"
+                                  d="M274.719,228.033a28.328,28.328,0,0,0-7.783-.96h-.172a27.508,27.508,0,0,0-7.207.859c-2.092.586-2.81,1.253-2.9,1.526a.076.076,0,0,0-.01.04l.02.04c.061.212.657.9,2.83,1.536a31.413,31.413,0,0,0,15.131-.051c2.244-.667,2.749-1.365,2.759-1.516v-.01C277.377,229.347,276.872,228.68,274.719,228.033Z"
+                                  transform="translate(-256.646 -227.073)"
+                                  fill="#7565c3"
+                                />
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                        <div class="attandance__card__topbar__heading">
+                          Accounts
+                        </div>
+                      </div>
+                      <div class="accounts__card__heading">Current Balance</div>
+                      <div class="accounts__card__balance">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="53.185"
+                          height="26.592"
+                          viewBox="0 0 53.185 26.592"
+                          style="margin-right: 1em"
+                        >
+                          <path
+                            id="Icon_awesome-digital-tachograph"
+                            data-name="Icon awesome-digital-tachograph"
+                            d="M50.526,6.75H2.659A2.66,2.66,0,0,0,0,9.409V30.683a2.66,2.66,0,0,0,2.659,2.659H50.526a2.66,2.66,0,0,0,2.659-2.659V9.409A2.66,2.66,0,0,0,50.526,6.75ZM25.263,28.024a.665.665,0,0,1-.665.665H5.983a.665.665,0,0,1-.665-.665v-.665a.665.665,0,0,1,.665-.665H24.6a.665.665,0,0,1,.665.665ZM5.983,22.705v-1.33a.665.665,0,0,1,.665-.665h1.33a.665.665,0,0,1,.665.665v1.33a.665.665,0,0,1-.665.665H6.648A.665.665,0,0,1,5.983,22.705Zm5.319,0v-1.33a.665.665,0,0,1,.665-.665H13.3a.665.665,0,0,1,.665.665v1.33a.665.665,0,0,1-.665.665h-1.33A.665.665,0,0,1,11.3,22.705Zm5.319,0v-1.33a.665.665,0,0,1,.665-.665h1.33a.665.665,0,0,1,.665.665v1.33a.665.665,0,0,1-.665.665h-1.33A.665.665,0,0,1,16.62,22.705Zm5.318,0v-1.33a.665.665,0,0,1,.665-.665h1.33a.665.665,0,0,1,.665.665v1.33a.665.665,0,0,1-.665.665H22.6A.665.665,0,0,1,21.939,22.705Zm3.324-5.318a1.329,1.329,0,0,1-1.33,1.33H6.648a1.329,1.329,0,0,1-1.33-1.33V13.4a1.329,1.329,0,0,1,1.33-1.33H23.933a1.329,1.329,0,0,1,1.33,1.33Zm22.6,10.637a.665.665,0,0,1-.665.665H28.587a.665.665,0,0,1-.665-.665v-.665a.665.665,0,0,1,.665-.665H47.2a.665.665,0,0,1,.665.665Z"
+                            transform="translate(0 -6.75)"
+                            fill="#fe588f"
+                          />
+                        </svg>
+                        <div class="accounts__card__balance__amount">
+                          $ 10,197.2
+                        </div>
+                        <select
+                          name=""
+                          id=""
+                          class="accounts__card__currency__select"
+                        >
+                          <option value="">USD</option>
+                          <option value="">RS</option>
+                          <option value="">INR</option>
+                        </select>
+                      </div>
+                      <div class="accounts__card__heading">
+                        Recent Activities
+                      </div>
+                      <div class="account__card__recent__transactions">
+                        <div class="account__card__recent__transactions__entry">
+                          <img
+                            src="./assets/companyPic.png"
+                            alt="companyPic"
+                            class="
+                              account__card__recent__transactions__entry__img
+                            "
+                          />
+                          <div
+                            class="
+                              account__card__recent__transactions__entry__content
+                            "
+                          >
+                            <div
+                              class="
+                                account__card__recent__transactions__entry__name
+                              "
+                            >
+                              Company Name
+                            </div>
+                            <div
+                              class="
+                                account__card__recent__transactions__entry__info
+                              "
+                            >
+                              lorem
+                            </div>
+                          </div>
+                          <div
+                            class="
+                              account__card__recent__transactions__entry__anylatics
+                            "
+                          >
+                            <div
+                              class="
+                                account__card__recent__transactions__entry__content__status
+                                account__card__recent__transactions__entry__content__status__paid
+                              "
+                            >
+                              Paid
+                            </div>
+                            <div
+                              class="
+                                account__card__recent__transactions__entry__content__amount
+                              "
+                            >
+                              $ 10000.9
+                            </div>
+                          </div>
+                        </div>
+                        <div class="account__card__recent__transactions__entry">
+                          <img
+                            src="./assets/companyPic.png"
+                            alt="companyPic"
+                            class="
+                              account__card__recent__transactions__entry__img
+                            "
+                          />
+                          <div
+                            class="
+                              account__card__recent__transactions__entry__content
+                            "
+                          >
+                            <div
+                              class="
+                                account__card__recent__transactions__entry__name
+                              "
+                            >
+                              Company Name
+                            </div>
+                            <div
+                              class="
+                                account__card__recent__transactions__entry__info
+                              "
+                            >
+                              lorem
+                            </div>
+                          </div>
+                          <div
+                            class="
+                              account__card__recent__transactions__entry__anylatics
+                            "
+                          >
+                            <div
+                              class="
+                                account__card__recent__transactions__entry__content__status
+                                account__card__recent__transactions__entry__content__status__pending
+                              "
+                            >
+                              Pending
+                            </div>
+                            <div
+                              class="
+                                account__card__recent__transactions__entry__content__amount
+                              "
+                            >
+                              $ 10000.9
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </body>
+</html>
