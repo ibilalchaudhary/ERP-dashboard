@@ -238,6 +238,12 @@ a {
   width: 35px;
   height: 35px;
 }
+.feature__card__badge:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+.inventory__card__red:hover {
+  background-color: #f879a3 !important;
+}
 .feature__card__heading {
   display: flex;
   flex-direction: column;
@@ -251,6 +257,9 @@ a {
   font-size: 16px;
   color: var(--primary);
   font-weight: bold;
+}
+.feature__card:hover {
+  background-color: #edeef2;
 }
 .attandance__card__stats {
   display: flex;
@@ -381,6 +390,9 @@ a {
   justify-content: center;
   align-items: center;
 }
+.inventory__card__icon:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
 .inventory__card__content {
   display: flex;
   flex-direction: column;
@@ -407,6 +419,9 @@ a {
   color: #a99de5;
   font-weight: bold;
   margin-top: 1em;
+}
+.inventory__card:hover {
+  background-color: #8b77fc;
 }
 .perchase__card {
   width: 100%;
@@ -556,12 +571,18 @@ a {
 .attandance__card__user__entry {
   display: flex;
   align-items: center;
+  padding: 1em 0.5em;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .attandance__card__user__entry__img {
   width: 60px;
   height: 60px;
   margin-right: 1em;
-  margin-bottom: 1em;
 }
 .attandance__card__user__entry__name {
   font-size: 16px;
@@ -572,6 +593,9 @@ a {
 .attandance__card__user__entry__email {
   font-size: 12px;
   color: var(--text-color);
+}
+.attandance__card__user__entry:hover {
+  background-color: #edeef2;
 }
 .attandance__card__link {
   display: flex;
