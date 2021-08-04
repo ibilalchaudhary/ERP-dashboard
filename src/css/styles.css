@@ -79,6 +79,7 @@ a {
   border-bottom-right-radius: 10px;
   padding-left: 1.2em;
   z-index: 2;
+  white-space: nowrap;
 }
 .sidebar__entry:hover,
 .sidebar__entry:active,
