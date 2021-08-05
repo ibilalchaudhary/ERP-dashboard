@@ -241,8 +241,17 @@ a {
 .feature__card__badge:hover {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
+.inventory__card__red {
+  background-color: var(--third) !important;
+}
 .inventory__card__red:hover {
-  background-color: #f879a3 !important;
+  background-color: #ce4774 !important;
+}
+.inventory__card__purple {
+  background-color: var(--primary) !important;
+}
+.inventory__card__purple:hover {
+  background-color: #5b4daa !important;
 }
 .feature__card__heading {
   display: flex;
@@ -297,7 +306,7 @@ a {
 }
 .feature__card__heading__border {
   margin: 0em auto;
-  margin-top: 5px;
+  margin-top: 10px;
   width: 80%;
   height: 3px;
   background-color: #d6d6d6;
@@ -344,6 +353,9 @@ a {
   position: absolute;
   left: calc(50% - 35px);
   top: -35px;
+}
+.feature__card__badge__reverse:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
 .feature__card__badge__reverse svg {
   width: 35px;
@@ -421,7 +433,7 @@ a {
   margin-top: 1em;
 }
 .inventory__card:hover {
-  background-color: #8b77fc;
+  background-color: #5b4daa;
 }
 .perchase__card {
   width: 100%;
